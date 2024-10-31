@@ -1,5 +1,5 @@
 # REST API Posts Project ✅
-![Blog Image](https://raw.githubusercontent.com/excommunicades/posts_project/main/avsa.jpg)
+![Blog Image](https://raw.githubusercontent.com/excommunicades/posts_project/main/ava.jpg)
 
 ## DESCRIPTION:
 
