@@ -15,10 +15,6 @@ def auth_client(client):
 
     Fixture to create an authenticated client for testing.
 
-    This fixture creates a new user, logs in to obtain a JWT token, and
-    configures the client to include the token in its authorization header
-    for subsequent requests.
-
     """
 
     User.objects.create_user(
@@ -53,10 +49,6 @@ def test_register_user(client):
 
     """
     Test the user registration functionality.
-
-    This test verifies that a new user can register successfully
-    through the API
-    and receives a user ID in the response.
 
     """
 
@@ -96,9 +88,6 @@ def test_login_user(client):
 
     Test the user login functionality.
 
-    This test verifies that a user can log in successfully through the API
-    and receives a JWT token in the response.
-
     """
 
     User.objects.create_user(
@@ -132,9 +121,6 @@ def test_create_post(auth_client, client):
 
     Test the creation of a new blog post.
 
-    This test verifies that a new blog post can be successfully created
-    via the API and that the response contains the expected data.
-
     """
 
     url = "/api/posts/"
@@ -164,9 +150,6 @@ def test_moderate_content(auth_client, client):
     """
 
     Test the content moderation functionality when creating a new post.
-
-    This test verifies that when a post is created with inappropriate
-    language in its content, the post is marked as blocked.
 
     """
 
@@ -198,10 +181,6 @@ def test_send_auto_reply(auth_client, client):
 
     Test the automatic reply functionality when a comment is made on a post.
 
-    This test verifies that when a comment is added to a blog post with
-    automatic replies enabled, the system responds with an automatic
-    reply after a specified delay.
-    
     """
 
     post_url = "/api/posts/"
@@ -259,11 +238,6 @@ def test_create_comment(auth_client, client):
 
     Test the create comment API endpoint.
 
-    This test verifies that a new comment can be successfully created
-    for a specific blog post. It checks that the response returns the
-    expected status code and that the created comment's ID is present
-    in the response.
-
     """
 
     user = User.objects.get(username='testuser')
@@ -296,10 +270,6 @@ def test_list_posts(auth_client, client):
 
     """
     Test the list posts API endpoint.
-
-    This test verifies that all blog posts created by a user are correctly
-    retrieved through the API. It checks that the response returns the
-    expected number of posts.
 
     """
 
@@ -334,10 +304,6 @@ def test_list_comments(auth_client, client):
 
     """
     Test the list comments API endpoint for a specific post.
-
-    This test verifies that the comments associated with a given post are 
-    correctly retrieved through the API. It checks that the response returns
-    the expected number of comments.
 
     """
 
@@ -379,12 +345,6 @@ def test_comments_daily_breakdown(auth_client, client):
     """
 
     Test the comments_daily_breakdown API endpoint.
-
-    This test checks the functionality of
-    the comments_daily_breakdown endpoint,
-
-    ensuring it returns the correct counts of total and blocked comments within
-    a specified date range.
 
     """
 

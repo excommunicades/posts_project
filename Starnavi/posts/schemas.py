@@ -73,8 +73,6 @@ class UserRegistration(Schema):
 
     """
     Schema for input data when registering a new user.
-
-
     """
 
     username: constr(min_length=1)
@@ -96,7 +94,6 @@ class UserResponse(Schema):
 class UserLogin(Schema):
     """
     Schema for input data when a user logs in.
-
     """
     username: str
     password: str
@@ -106,7 +103,6 @@ class Token(Schema):
 
     """
     Schema for output data representing a token.
-
     """
 
     token: str

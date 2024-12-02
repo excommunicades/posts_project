@@ -12,9 +12,6 @@ def test_post_creation():
 
     Test the creation of a Post instance.
 
-    This test verifies that a Post can be created successfully
-    with valid data and checks if the attributes are set correctly.
-
     """
     user = User.objects.create_user(
                             username='author',
@@ -52,9 +49,6 @@ def test_comment_creation():
 
     Test the creation of a Comment instance.
 
-    This test verifies that a Comment can be created successfully
-    with valid data and checks if the attributes are set correctly.
-
     """
 
     user = User.objects.create_user(
@@ -90,9 +84,6 @@ def test_post_string_representation():
 
     Test the string representation of a Post instance.
 
-    This test verifies that the __str__ method of the Post model
-    returns the correct title of the post.
-
     """
 
     user = User.objects.create_user(username='author', password='testpass')
@@ -112,9 +103,6 @@ def test_comment_relationship():
     """
 
     Test the relationship between Comment and Post models.
-
-    This test checks that comments are correctly linked to their
-    respective posts and that the related_name functionality works.
 
     """
 

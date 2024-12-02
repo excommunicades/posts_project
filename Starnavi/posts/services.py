@@ -42,11 +42,6 @@ def jwt_required(func: Callable) -> Callable:
     """
     Decorator to protect views requiring JWT authentication.
 
-    This decorator checks for a valid JWT in the request's 
-    Authorization header. If the token is missing or invalid,
-    it returns an error response. If the token is valid, it
-    attaches the authenticated user to the request object.
-
     """
 
     @functools.wraps(func)
@@ -86,11 +81,6 @@ def send_auto_reply(comment_id: int) -> None:
     """
     Send an automatic reply to a comment based
                 on the associated post's settings.
-
-    This function retrieves the comment by its ID and checks if the
-    associated post has automatic replies enabled. If enabled, it waits
-    for the specified delay before creating a new comment as a reply
-    using the auto-reply text from the post.
 
     """
 
