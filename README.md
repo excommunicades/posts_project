@@ -1,4 +1,4 @@
-# REST API Book Project ✅
+# REST API Posts Project ✅
 ![Blog Image](https://raw.githubusercontent.com/excommunicades/posts_project/main/ava.jpg)
 
 ## DESCRIPTION:
